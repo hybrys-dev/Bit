@@ -1,0 +1,44 @@
+{
+  "agentInfo": { "name": "fake-agent", "version": "0.0.0" },
+  "protocolVersion": 1,
+  "configOptions": [],
+  "sessions": [],
+  "prompts": [
+    {
+      "match": "hello",
+      "steps": [
+        {
+          "type": "update",
+          "delayMs": 0,
+          "update": {
+            "sessionUpdate": "agent_message_chunk",
+            "content": { "type": "text", "text": "Hello from fake-agent" }
+          }
+        }
+      ],
+      "stopReason": "end_turn"
+    },
+    {
+      "match": "slow",
+      "steps": [
+        {
+          "type": "update",
+          "delayMs": 0,
+          "update": {
+            "sessionUpdate": "agent_message_chunk",
+            "content": { "type": "text", "text": "starting" }
+          }
+        },
+        {
+          "type": "update",
+          "delayMs": 5000,
+          "update": {
+            "sessionUpdate": "agent_message_chunk",
+            "content": { "type": "text", "text": "should-not-arrive" }
+          }
+        }
+      ],
+      "stopReason": "end_turn"
+    }
+  ]
+}

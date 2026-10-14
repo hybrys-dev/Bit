@@ -1,0 +1,6 @@
+{
+  "identifier": "default",
+  "description": "Placeholder companion window. The webview cannot spawn processes or read files.",
+  "windows": ["companion"],
+  "permissions": ["core:default"]
+}

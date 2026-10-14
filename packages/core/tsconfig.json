@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "declaration": false,
+    "sourceMap": false,
+    "paths": {
+      "@bit/protocol": ["../protocol/src/index.ts"]
+    }
+  },
+  "include": ["src"]
+}
