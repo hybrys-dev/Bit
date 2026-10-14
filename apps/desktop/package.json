@@ -1,0 +1,13 @@
+{
+  "name": "@bit/desktop",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build-sidecar.mjs && cargo build --locked --manifest-path src-tauri/Cargo.toml"
+  },
+  "dependencies": {
+    "@bit/core": "workspace:*",
+    "@bit/ui": "workspace:*"
+  }
+}
